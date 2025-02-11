@@ -1,5 +1,9 @@
 # Credit Card Validator
-This is a Python implementation for a program that checks whether a credit card number is valid based on the Luhn algorithm.
+This is a Python implementation for a program that checks whether a credit card number is valid based on the Luhn algorithm. The supported payment card network processors include
+- American Express
+- Visa
+- Mastercard
+- Discoverer
 
 This program requires Python 3 which can be installed from [here](https://www.python.org/downloads/).
 
