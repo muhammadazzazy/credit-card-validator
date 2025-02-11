@@ -2,7 +2,7 @@ from sys import exit
 
 
 def main() -> None:
-    NUM_OF_DIGITS = 16
+    NUM_OF_DIGITS: int = 16
     first_digits: dict[str: int] = {'American Express': 3,
                                     'Visa': 4, 'Mastercard': 5, 'Discover': 6}
 
