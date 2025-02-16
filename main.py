@@ -11,7 +11,7 @@ def main() -> None:
     while True:
         try:
             user_input: str = input('Enter a credit card number: ')
-            
+
         except KeyboardInterrupt:
             print(exit_message)
             exit()
@@ -22,19 +22,19 @@ def main() -> None:
 
         credit_card_num: str = user_input
 
-        invalid_msg: str = f'The credit card number {credit_card_num} is not valid.'
-        valid_msg: str = f'The credit card number {credit_card_num} is valid!'
+        invalid_message: str = f'The credit card number {credit_card_num} is not valid.'
+        valid_message: str = f'The credit card number {credit_card_num} is valid!'
 
         if not credit_card_num.isnumeric():
-            print(invalid_msg)
+            print(invalid_message)
             continue
 
         if len(credit_card_num) != NUM_OF_DIGITS:
-            print(invalid_msg)
+            print(invalid_message)
             continue
 
         if int(credit_card_num[0]) not in first_digits.values():
-            print(invalid_msg)
+            print(invalid_message)
             continue
 
         string: str = ''
@@ -49,9 +49,9 @@ def main() -> None:
             sum += int(digit)
 
         if sum % 10 == 0:
-            print(valid_msg)
+            print(valid_message)
         else:
-            print(invalid_msg)
+            print(invalid_message)
 
 
 if __name__ == '__main__':
