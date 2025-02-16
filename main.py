@@ -5,14 +5,19 @@ def main() -> None:
     NUM_OF_DIGITS: int = 16
     first_digits: dict[str: int] = {'American Express': 3,
                                     'Visa': 4, 'Mastercard': 5, 'Discover': 6}
-
+    exit_message: str = 'Exiting program...'
     print('Welcome to The 💳 Validator!')
 
     while True:
-        user_input: str = input('Enter a credit card number: ')
+        try:
+            user_input: str = input('Enter a credit card number: ')
+            
+        except KeyboardInterrupt:
+            print(exit_message)
+            exit()
 
         if user_input == 'exit':
-            print('Thanks for trying my program!')
+            print(exit_message)
             exit()
 
         credit_card_num: str = user_input
